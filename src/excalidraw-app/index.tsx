@@ -611,21 +611,10 @@ const ExcalidrawWrapper = () => {
         <MainMenu.DefaultItems.SaveToActiveFile />
         <MainMenu.DefaultItems.Export />
         <MainMenu.DefaultItems.SaveAsImage />
-        <MainMenu.DefaultItems.LiveCollaborationTrigger
-          isCollaborating={isCollaborating}
-          onSelect={() => setCollabDialogShown(true)}
-        />
 
         <MainMenu.DefaultItems.Help />
         <MainMenu.DefaultItems.ClearCanvas />
         <MainMenu.Separator />
-        <MainMenu.ItemLink
-          icon={PlusPromoIcon}
-          href="https://plus.excalidraw.com/plus?utm_source=excalidraw&utm_medium=app&utm_content=hamburger"
-          className="ExcalidrawPlus"
-        >
-          Excalidraw+
-        </MainMenu.ItemLink>
         <MainMenu.DefaultItems.Socials />
         <MainMenu.Separator />
         <MainMenu.DefaultItems.ToggleTheme />
@@ -676,18 +665,6 @@ const ExcalidrawWrapper = () => {
           <WelcomeScreen.Center.Menu>
             <WelcomeScreen.Center.MenuItemLoadScene />
             <WelcomeScreen.Center.MenuItemHelp />
-            <WelcomeScreen.Center.MenuItemLiveCollaborationTrigger
-              onSelect={() => setCollabDialogShown(true)}
-            />
-            {!isExcalidrawPlusSignedUser && (
-              <WelcomeScreen.Center.MenuItemLink
-                href="https://plus.excalidraw.com/plus?utm_source=excalidraw&utm_medium=app&utm_content=welcomeScreenGuest"
-                shortcut={null}
-                icon={PlusPromoIcon}
-              >
-                Try Excalidraw Plus!
-              </WelcomeScreen.Center.MenuItemLink>
-            )}
           </WelcomeScreen.Center.Menu>
         </WelcomeScreen.Center>
       </WelcomeScreen>

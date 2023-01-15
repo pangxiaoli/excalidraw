@@ -8,8 +8,6 @@ import DropdownMenu from "../dropdownMenu/DropdownMenu";
 
 import * as DefaultItems from "./DefaultItems";
 
-import { UserList } from "../UserList";
-import { t } from "../../i18n";
 import { HamburgerMenuIcon } from "../icons";
 
 const MainMenu = ({ children }: { children?: React.ReactNode }) => {
@@ -32,12 +30,6 @@ const MainMenu = ({ children }: { children?: React.ReactNode }) => {
       </DropdownMenu.Trigger>
       <DropdownMenu.Content onClickOutside={onClickOutside}>
         {children}
-        {device.isMobile && appState.collaborators.size > 0 && (
-          <fieldset className="UserList-Wrapper">
-            <legend>{t("labels.collaborators")}</legend>
-            <UserList mobile={true} collaborators={appState.collaborators} />
-          </fieldset>
-        )}
       </DropdownMenu.Content>
     </DropdownMenu>
   );

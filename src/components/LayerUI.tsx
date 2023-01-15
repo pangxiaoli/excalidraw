@@ -30,7 +30,6 @@ import { PasteChartDialog } from "./PasteChartDialog";
 import { Section } from "./Section";
 import { HelpDialog } from "./HelpDialog";
 import Stack from "./Stack";
-import { UserList } from "./UserList";
 import Library from "../data/library";
 import { JSONExportDialog } from "./JSONExportDialog";
 import { LibraryButton } from "./LibraryButton";
@@ -341,8 +340,6 @@ const LayerUI = ({
               },
             )}
           >
-            <UserList collaborators={appState.collaborators} />
-            {renderTopRightUI?.(device.isMobile, appState)}
             {!appState.viewModeEnabled && (
               <LibraryButton appState={appState} setAppState={setAppState} />
             )}

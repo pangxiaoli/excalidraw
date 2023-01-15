@@ -240,46 +240,6 @@ export const Socials = () => (
     >
       GitHub
     </DropdownMenuItemLink>
-    <DropdownMenuItemLink
-      icon={DiscordIcon}
-      href="https://discord.gg/UexuTaE"
-      aria-label="Discord"
-    >
-      Discord
-    </DropdownMenuItemLink>
-    <DropdownMenuItemLink
-      icon={TwitterIcon}
-      href="https://twitter.com/excalidraw"
-      aria-label="Twitter"
-    >
-      Twitter
-    </DropdownMenuItemLink>
   </>
 );
 Socials.displayName = "Socials";
-
-export const LiveCollaborationTrigger = ({
-  onSelect,
-  isCollaborating,
-}: {
-  onSelect: () => void;
-  isCollaborating: boolean;
-}) => {
-  // FIXME Hack until we tie "t" to lang state
-  // eslint-disable-next-line
-  const appState = useExcalidrawAppState();
-  return (
-    <DropdownMenuItem
-      data-testid="collab-button"
-      icon={usersIcon}
-      className={clsx({
-        "active-collab": isCollaborating,
-      })}
-      onSelect={onSelect}
-    >
-      {t("labels.liveCollaboration")}
-    </DropdownMenuItem>
-  );
-};
-
-LiveCollaborationTrigger.displayName = "LiveCollaborationTrigger";

@@ -163,23 +163,6 @@ const MenuItemLoadScene = () => {
 };
 MenuItemLoadScene.displayName = "MenuItemLoadScene";
 
-const MenuItemLiveCollaborationTrigger = ({
-  onSelect,
-}: {
-  onSelect: () => any;
-}) => {
-  // FIXME when we tie t() to lang state
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const appState = useExcalidrawAppState();
-
-  return (
-    <WelcomeScreenMenuItem shortcut={null} onSelect={onSelect} icon={usersIcon}>
-      {t("labels.liveCollaboration")}
-    </WelcomeScreenMenuItem>
-  );
-};
-MenuItemLiveCollaborationTrigger.displayName =
-  "MenuItemLiveCollaborationTrigger";
 
 // -----------------------------------------------------------------------------
 
@@ -190,6 +173,5 @@ Center.MenuItem = WelcomeScreenMenuItem;
 Center.MenuItemLink = WelcomeScreenMenuItemLink;
 Center.MenuItemHelp = MenuItemHelp;
 Center.MenuItemLoadScene = MenuItemLoadScene;
-Center.MenuItemLiveCollaborationTrigger = MenuItemLiveCollaborationTrigger;
 
 export { Center };
